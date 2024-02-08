@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5e6riwnkh2ap"]
+
+[ext_resource type="Script" path="res://player/carta.gd" id="1_1vdac"]
+[ext_resource type="PackedScene" uid="uid://dd3jw0oynvrcb" path="res://player/symbols.tscn" id="3_7pd83"]
+[ext_resource type="PackedScene" uid="uid://thd0d3hktn3w" path="res://player/cardTexture.tscn" id="3_ww6n3"]
+[ext_resource type="AudioStream" uid="uid://ddc76tq1qqggq" path="res://audio/click3.wav" id="4_3ogqp"]
+[ext_resource type="AudioStream" uid="uid://cjyc7n88nprno" path="res://audio/deleteCard.wav" id="5_oru06"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qu6j"]
+size = Vector2(161.5, 156)
+
+[node name="card" type="Node2D"]
+script = ExtResource("1_1vdac")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(81.25, 81)
+shape = SubResource("RectangleShape2D_7qu6j")
+
+[node name="Symbols" parent="." instance=ExtResource("3_7pd83")]
+position = Vector2(66, 97)
+scale = Vector2(0.715, 0.715)
+
+[node name="CardTexture" parent="." instance=ExtResource("3_ww6n3")]
+position = Vector2(81, 81)
+scale = Vector2(1.25, 1.25)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 111.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 31
+text = "x1"
+horizontal_alignment = 1
+
+[node name="AudioSetCard" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3ogqp")
+
+[node name="AudioGetCard" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3ogqp")
+
+[node name="AudioDelete" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_oru06")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

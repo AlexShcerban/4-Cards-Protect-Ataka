@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfdcp14hktio4"]
+
+[ext_resource type="Script" path="res://LevelParts/mainLevel.gd" id="1_qp2j2"]
+[ext_resource type="Texture2D" uid="uid://d2817ccmhqik6" path="res://img/new_atlas_texture.tres" id="2_6nexl"]
+[ext_resource type="PackedScene" uid="uid://bad5q3rq6bo45" path="res://LevelParts/level.tscn" id="2_xw3vu"]
+[ext_resource type="PackedScene" uid="uid://gwx8ruhivu8l" path="res://LevelParts/UIScene.tscn" id="3_6kxwb"]
+
+[node name="MainLevel" type="Node2D"]
+script = ExtResource("1_qp2j2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(382.5, 739)
+scale = Vector2(64.4375, 102.375)
+texture = ExtResource("2_6nexl")
+
+[node name="Level" parent="." instance=ExtResource("2_xw3vu")]
+position = Vector2(-1, 5)
+
+[node name="UiScene" parent="." instance=ExtResource("3_6kxwb")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 11.0
+offset_right = 63.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 48
+text = "0"

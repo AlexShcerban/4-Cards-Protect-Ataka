@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu6mf3t5i3fpy"]
+
+[ext_resource type="Script" path="res://enemy/handEnemy.gd" id="1_pbqmu"]
+[ext_resource type="PackedScene" uid="uid://j8r4ftteu4y0" path="res://enemy/cardEnemy.tscn" id="2_afkxt"]
+[ext_resource type="AudioStream" uid="uid://c3i40m6wjuday" path="res://audio/hit1.wav" id="3_8ixch"]
+[ext_resource type="AudioStream" uid="uid://cqpgyh8rext0o" path="res://audio/protect1.wav" id="4_r4xyl"]
+[ext_resource type="AudioStream" uid="uid://3fu7revokqrb" path="res://audio/powerUpCard.wav" id="5_nr1ow"]
+
+[node name="HandEnemy" type="Node2D"]
+script = ExtResource("1_pbqmu")
+
+[node name="CardEnemy" parent="." instance=ExtResource("2_afkxt")]
+position = Vector2(0, -4)
+
+[node name="CardEnemy2" parent="." instance=ExtResource("2_afkxt")]
+position = Vector2(159, -4)
+
+[node name="CardEnemy3" parent="." instance=ExtResource("2_afkxt")]
+position = Vector2(317, -4)
+
+[node name="CardEnemy4" parent="." instance=ExtResource("2_afkxt")]
+position = Vector2(476, -4)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(0.717647, 0, 0.121569, 1)
+offset_left = 1.0
+offset_top = -30.0
+offset_right = 635.0
+offset_bottom = -3.0
+step = 1.0
+value = 100.0
+
+[node name="AudioAttack" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8ixch")
+
+[node name="AudioProtect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_r4xyl")
+
+[node name="AudioPowerUpCard" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_nr1ow")
+volume_db = -8.357
+pitch_scale = 0.58

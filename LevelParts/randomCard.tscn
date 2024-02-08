@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgvmans6v2bco"]
+
+[ext_resource type="Script" path="res://LevelParts/randomCard.gd" id="1_tnu0f"]
+[ext_resource type="Texture2D" uid="uid://dfsm6mvjdd78p" path="res://icon.svg" id="2_x2ewj"]
+[ext_resource type="Texture2D" uid="uid://d2817ccmhqik6" path="res://img/new_atlas_texture.tres" id="3_l0kco"]
+[ext_resource type="PackedScene" uid="uid://c5e6riwnkh2ap" path="res://player/carta.tscn" id="3_wfeek"]
+
+[node name="RandomCard" type="Node2D" node_paths=PackedStringArray("card")]
+script = ExtResource("1_tnu0f")
+card = NodePath("card")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+position = Vector2(95.2499, 93)
+scale = Vector2(1.46485, 1.4375)
+texture = ExtResource("2_x2ewj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.176471, 0.176471, 0.176471, 1)
+position = Vector2(95.2188, 91.2188)
+scale = Vector2(5.02735, 0.640625)
+texture = ExtResource("3_l0kco")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.176471, 0.176471, 0.176471, 1)
+position = Vector2(95.2188, 91.2188)
+rotation = -1.5708
+scale = Vector2(5.02735, 0.640625)
+texture = ExtResource("3_l0kco")
+
+[node name="card" parent="." instance=ExtResource("3_wfeek")]
+position = Vector2(12, 11)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://70hc0fuje66n"]
+
+[ext_resource type="Script" path="res://player/hand.gd" id="1_4tss7"]
+[ext_resource type="PackedScene" uid="uid://c5e6riwnkh2ap" path="res://player/carta.tscn" id="2_wg23q"]
+
+[node name="Hand" type="Node2D"]
+script = ExtResource("1_4tss7")
+
+[node name="card" parent="." instance=ExtResource("2_wg23q")]
+position = Vector2(-1, 7)
+
+[node name="card2" parent="." instance=ExtResource("2_wg23q")]
+position = Vector2(159, 7)
+
+[node name="card3" parent="." instance=ExtResource("2_wg23q")]
+position = Vector2(319, 7)
+
+[node name="card4" parent="." instance=ExtResource("2_wg23q")]
+position = Vector2(479, 7)

@@ -1,0 +1,93 @@
+[gd_scene load_steps=2 format=3 uid="uid://xqjjkxr5etks"]
+
+[ext_resource type="Script" path="res://SelectLevels.gd" id="1_433hb"]
+
+[node name="SelectLevels" type="Node2D"]
+script = ExtResource("1_433hb")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 108.0
+offset_top = 264.0
+offset_right = 663.0
+offset_bottom = 779.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_right = 1.0
+anchor_bottom = 0.592
+offset_left = -2.775
+offset_right = -1.0
+offset_bottom = -16.88
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 295
+
+[node name="ControlEmpty" type="Control" parent="Panel/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="level1" type="Button" parent="Panel/ScrollContainer/HBoxContainer/ControlEmpty"]
+visible = false
+layout_mode = 0
+offset_left = -127.0
+offset_top = 16.0
+offset_right = 128.0
+offset_bottom = 233.0
+mouse_filter = 1
+text = "Level 1"
+
+[node name="Control2" type="Control" parent="Panel/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="level1" type="Button" parent="Panel/ScrollContainer/HBoxContainer/Control2"]
+layout_mode = 0
+offset_left = -127.0
+offset_top = 16.0
+offset_right = 128.0
+offset_bottom = 233.0
+mouse_filter = 1
+text = "Level 1"
+
+[node name="Control3" type="Control" parent="Panel/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="level1" type="Button" parent="Panel/ScrollContainer/HBoxContainer/Control3"]
+layout_mode = 0
+offset_left = -127.0
+offset_top = 16.0
+offset_right = 128.0
+offset_bottom = 233.0
+mouse_filter = 1
+text = "Level 2"
+
+[node name="Control4" type="Control" parent="Panel/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="level1" type="Button" parent="Panel/ScrollContainer/HBoxContainer/Control4"]
+layout_mode = 0
+offset_left = -127.0
+offset_top = 16.0
+offset_right = 128.0
+offset_bottom = 233.0
+mouse_filter = 1
+text = "Level 3"
+
+[node name="Control5" type="Control" parent="Panel/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="level1" type="Button" parent="Panel/ScrollContainer/HBoxContainer/Control5"]
+visible = false
+layout_mode = 0
+offset_left = -127.0
+offset_top = 16.0
+offset_right = 128.0
+offset_bottom = 233.0
+mouse_filter = 1
+text = "Level 1"
